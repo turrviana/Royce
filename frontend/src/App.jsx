@@ -112,7 +112,7 @@ function App() {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="metragem" className="block text-sm fonnt-medium mb-1">
+          <label htmlFor="metragem" className="block text-sm font-medium mb-1">
             Metragem (m²)
           </label>
           <input
