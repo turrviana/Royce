@@ -78,8 +78,7 @@ function App() {
       setLoading(false);
     }
   };
-
-  // ✅ AGORA ESTÁ DEFINIDO CORRETAMENTE
+  
   const usoAtual = getUsoAtual();
 
   return (
@@ -98,29 +97,46 @@ function App() {
           {usoAtual} / {LIMITE_USO} análises usadas
         </p>
 
-        <input
-          type="number"
-          placeholder="Ex: 300000"
-          className="w-full p-2 border rounded-lg mb-3"
-          value={preco}
-          onChange={(e) => setPreco(e.target.value)}
-        />
+        <div className="mb-3">
+          <label htmlFor="preco" className="block text-sm font-medium mb-1">
+            Preço do imóvel
+          </label>
+          <input
+            id="preco"
+            type="number"
+            placeholder="Ex: 300000"
+            className="w-full p-2 border rounded-lg mb-3"
+            value={preco}
+            onChange={(e) => setPreco(e.target.value)}
+          />
+        </div>
 
-        <input
-          type="number"
-          placeholder="Ex: 60"
-          className="w-full p-2 border rounded-lg mb-3"
-          value={metragem}
-          onChange={(e) => setMetragem(e.target.value)}
-        />
+        <div className="mb-3">
+          <label htmlFor="metragem" className="block text-sm fonnt-medium mb-1">
+            Metragem (m²)
+          </label>
+          <input
+            id="metragem"
+            type="number"
+            placeholder="Ex: 60"
+            className="w-full p-2 border rounded-lg mb-3"
+            value={metragem}
+            onChange={(e) => setMetragem(e.target.value)}
+          />
+        </div>
 
-        <input
-          type="text"
-          placeholder="Ex: São Paulo"
-          className="w-full p-2 border rounded-lg mb-3"
-          value={localizacao}
-          onChange={(e) => setLocalizacao(e.target.value)}
-        />
+        <div className="mb-4">
+          <label htmlFor="localizacao" className="block text-sm font-medium mb-1">
+            Localização
+          </label>
+          <input
+            type="text"
+            placeholder="Ex: São Paulo"
+            className="w-full p-2 border rounded-lg mb-3"
+            value={localizacao}
+            onChange={(e) => setLocalizacao(e.target.value)}
+          />
+        </div>
 
         {erro && (
           <p
