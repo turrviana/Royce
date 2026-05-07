@@ -63,7 +63,7 @@ function App() {
       setLoading(true);
       setResultado(null);
 
-      const res = await axios.post("http://localhost:3459/imoveis/analisar", {
+      const res = await axios.post("https://royce-1jth.onrender.com", {
         preco: Number(preco),
         metragem: Number(metragem),
         localizacao
