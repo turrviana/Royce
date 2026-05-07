@@ -41,6 +41,28 @@ router.post("/analisar", async (req, res) => {
         Média da região: ${media}
 
         Diga se vale a pena comprar e explique de forma simples.
+
+        Responda de forma curta, limpa e profissional.
+
+        Não use markdown.
+        Não use asteriscos.
+        Separe as partes com linhas curtas.
+
+        Formato:
+
+        Análise do preço:
+        texto
+
+        Pontos positivos:
+        texto
+
+        Pontos negativos:
+        texto
+
+        Conclusão:
+        texto curto
+
+        Se não houver pontos positivos ou negativos relevantes, informe isso.
         `
         ;
 
